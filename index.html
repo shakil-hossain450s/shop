@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+    <!-- Daisy UI and tailwind css CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    </style>
+</head>
+
+<body class="p-3">
+    <header>
+        <h2 class="text-center text-3xl font-semibold">Welcome To My Store</h2>
+        <div class="form-control lg:w-1/2 mx-auto max-w-xs">
+            <label class="label">
+                <span class="label-text">Search Your Product</span>
+                <span class="label-text-alt">Press <kbd class="kbd kbd-sm">enter</kbd></span>
+            </label>
+            <input id="search-field" type="search" placeholder="Search here"
+                class="input input-bordered w-full max-w-xs" />
+        </div>
+    </header>
+
+    <progress id="spinner" class="progress w-full hidden"></progress>
+
+    <main class="p-4">
+        <section>
+
+            <div class=" md:flex">
+                <!-- Menu Part -->
+                <div class="flex-none">
+                    <ul id="all-menu" class="menu menu-compact lg:menu-normal bg-base-100 p-2 shadow-2xl rounded-box">
+                        <!-- <li><a>Item 1</a></li>
+                        <li><a>Item 2</a></li>
+                        <li><a>Item 3</a></li> -->
+                    </ul>
+                </div>
+                <!-- Product Part -->
+                <div id="produts-container"
+                    class="grow grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mx-5">
+
+                </div>
+
+            </div>
+        </section>
+        <section id="not-found-message">
+
+        </section>
+        <!-- Modal Section -->
+        <section>
+            <!-- Put this part before tag -->
+            <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+            <div class="modal">
+                <div class="modal-box relative">
+                    <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <div id="modal-body">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
